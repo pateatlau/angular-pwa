@@ -1,6 +1,18 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    {{title}} using Angular 7!
-  </h1>
-</div>
+<mat-toolbar  color="primary">
+  <mat-toolbar-row>
+    <span>Javascript Jargon</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<main>
+  <mat-card *ngFor="let item of items">
+    <mat-card-header>
+      <mat-card-title>{{item.name}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      {{item.description}}
+    </mat-card-content>
+    <mat-card-actions>
+      <a  mat-raised-button  href="{{item.url}}"  color="primary">More</a>
+    </mat-card-actions>
+  </mat-card>
+</main>
